@@ -1,0 +1,20 @@
+
+.btn {
+  background-color: red;
+  padding: .5rem 2rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  transition: all 1500ms ;
+  
+
+
+  &:active {
+    color: black
+  }
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid white;
+}
