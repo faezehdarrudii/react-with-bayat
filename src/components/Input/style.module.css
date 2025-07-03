@@ -1,0 +1,19 @@
+.inputWrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    
+}
