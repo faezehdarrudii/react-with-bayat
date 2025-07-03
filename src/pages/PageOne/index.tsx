@@ -5,7 +5,7 @@ import Input from "../../components/Input";
 
 export default function PageOne() {
   //==== CONSTANTS ====//
-  const inputProps ={name:"email",label:"ایمیل",className:"input"};
+  const inputProps ={name:"email",label:"ایمیل",className:"input",placeHolder:'ایمیل خود را وارد نمایید.'};
 
   //==== RENDER ====//
   return (
