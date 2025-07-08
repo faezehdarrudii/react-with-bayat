@@ -13,7 +13,7 @@ export default function PageOne() {
   return (
     <div className={S.Container}>
       <h1>Page</h1>
-      <LoginForm></LoginForm>
+      {/* <LoginForm></LoginForm> */}
     
     </div>
   );
