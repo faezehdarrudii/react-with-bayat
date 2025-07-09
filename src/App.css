@@ -30,3 +30,13 @@
 .read-the-docs {
   color: #888;
 }
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.content-area {
+  display: flex;
+  flex: 1;
+  
+}
