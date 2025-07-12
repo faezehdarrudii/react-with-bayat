@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
+
 export default function Sidebar() {
+
+  const navigate=useNavigate();
+
   function handleLogout() {
-    alert("READ COMMENT PLZ");
-    console.log("MUST BE CLEAR AUTH LOCAL STORAGE AND REDIRECT TO /AUTH ROUTE");
+    localStorage.clear()
+    navigate("/auth")
   }
 
   return (

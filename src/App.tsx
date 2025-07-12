@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import LoginLayout from "./layouts/loginLayout/indext";
 import ContactUs from "./pages/ContactUS";
-import PageOne from "./pages/pageOne";
 import Shop from "./pages/Shop";
 import LoginForm from "./components/LoginForm/LoginForm";
+import PageOne from "./pages/PageOne";
 
 function App() {
   return (

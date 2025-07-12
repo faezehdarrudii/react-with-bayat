@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import Input from "../Input";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
+
+
+
 
   const handelSubmit = (e: React.FormEvent) => {
-    alert("READ COMMENT");
-    // TODO: IN THIS SECTION WHEN ENTER AN STATIC EMAIL AND SPECEFIC PASSWORD SET IN LOCAL STORAGE AND REDIRECT TO "/"
     e.preventDefault();
-    console.log({ email, password });
+    const userLogin=localStorage.getItem("user");
+    const userPass= localStorage.getItem("pass");
+    if(user==userLogin && password==userPass){
+      localStorage.setItem("islogin","true");
+     navigate("/")
+    }  
   };
   return (
     <form onSubmit={handelSubmit}>
       <Input
-        name="email"
-        label="ایمیل"
-        type="email"
-        placeHolder="ایمیل خود را وارد نمایید."
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        name="user"
+        label="نام کاربری"
+        type="text"
+        placeHolder="نام کاربری خود را وارد نمایید."
+        value={user}
+        onChange={(e) => setUser(e.target.value)}
       />
       <Input
         name="password"
