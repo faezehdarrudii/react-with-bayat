@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [error,setError]=useState("")
   const navigate = useNavigate()
 
 
@@ -18,6 +19,10 @@ const LoginForm = () => {
     if(user==userLogin && password==userPass){
       localStorage.setItem("islogin","true");
      navigate("/")
+    }else{
+       const errorMessage = "نام کاربری یا پسورد اشتباه است";
+      setError(errorMessage)
+      alert(errorMessage)
     }  
   };
   return (
